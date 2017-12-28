@@ -14,7 +14,8 @@
 #import "HGAuthorizationController.h"
 #import "TGRImageViewController.h"
 #import "TGRImageZoomAnimationController.h"
-
+#import "UITextField+HG.h"
+#import "NSString+HG.h"
 
 @interface HGLoginController () <UITextFieldDelegate, UIViewControllerTransitioningDelegate>
 
@@ -35,6 +36,9 @@
 
 // VM
 @property (nonatomic, strong) HGLoginViewMode* loginViewMode;
+
+// 一个必须要有的中间变量
+@property (nonatomic, copy) NSString* accountSTR;
 
 @end
 
@@ -95,6 +99,8 @@
         
         // 执行登录事件
         [self.loginViewMode.loginCommand execute:@"执行了登录事件"];
+        
+        
     }];
     
     [RACObserve(self.loginViewMode, loginResultSTR) subscribeNext:^(id x) {
@@ -115,22 +121,22 @@
     
 //    [[self rac_signalForSelector:@selector(textField:shouldChangeCharactersInRange:replacementString:) fromProtocol:@protocol(UITextFieldDelegate)] subscribeNext:^(RACTuple *tuple) {
 //        @strongify(self)
-//        
+//
 //        // 多参数
 //        if (tuple.first == self.userNameTextFiled) {
 //            DLog(@"userNameTextFiled")
 //        } else {
 //            DLog(@"psTextFiled")
 //        }
-//        
+//
 ////        id second = tuple.second;
-////        
+////
 ////        DLog(@"second = %@", second)
 ////        id third = tuple.third;
 ////        DLog(@"third = %@", third)
 ////        id fourth = tuple.fourth;
 ////        DLog(@"fourth = %@", fourth)
-//        
+//
 //    }];
     
     
@@ -139,8 +145,14 @@
         if (tuple.first == self.userNameTextFiled) {
             [self.psTextFiled becomeFirstResponder];
         } else {
-            // 执行登录事件
-            [self.loginViewMode.loginCommand execute:@"这里有BUG,执行了登录事件"];
+            
+            [self.psTextFiled resignFirstResponder];
+            
+            if ([self.psTextFiled.text passwpordRegex] && [self.userNameTextFiled.text userNameRegex]) {
+                [Public showLoadingView];
+                // 执行登录事件
+                [self.loginViewMode.loginCommand execute:@"执行了登录事件"];
+            }
         }
     }];
 
@@ -165,17 +177,48 @@
 }
 
 #pragma mark - UITextFieldDelegate
-//- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
-//- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-//    
-//    if (textField == self.userNameTextFiled) {
-//        [self.psTextFiled becomeFirstResponder];
-//        
-//        return NO;
-//    }
-//    
-//    return YES;
-//}
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    // 删除直接YES
+    if ([string isEqualToString:@""]) {
+        return YES;
+    }
+
+    // 高亮状态直接YES
+    if (textField.hg_isHighLighted) {
+        return YES;
+    }
+
+    NSString* resultSTR = [textField.text stringByReplacingCharactersInRange:range withString:string];
+
+    DLog(@"即将要输入的 %@", resultSTR);
+
+    // 用户名
+    if (textField == self.userNameTextFiled) {
+        if (resultSTR.length > 20) {
+            return NO;
+        }
+        
+        return [string userNameRegex];
+    }
+    
+    // 密码验证
+    return [resultSTR passwpordInputRegex];
+}
+
+- (IBAction)didChangedTextWithTextFiled:(UITextField *)textField {
+    // 高亮状态不处理
+    if (textField.hg_isHighLighted) {
+        return;
+    }
+    
+    if (textField == self.userNameTextFiled) {
+        if (![textField.text userNameRegex]) {
+            [textField invalidTextFieldCurContent:self.accountSTR];
+        } else {
+            self.accountSTR = textField.text;
+        }
+    }
+}
 
 
 #pragma mark - UIViewControllerTransitioningDelegate

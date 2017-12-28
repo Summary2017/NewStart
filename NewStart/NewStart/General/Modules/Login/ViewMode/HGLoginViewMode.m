@@ -8,6 +8,7 @@
 
 #import "HGLoginViewMode.h"
 #import "NetworkEngine+Login.h"
+#import "NSString+HG.h"
 
 @interface HGLoginViewMode ()
 
@@ -53,6 +54,16 @@
             NSLog(@"开始了");
             return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
                 @strongify(self)
+                
+                if (![self.accountMode.username passwpordRegex] || ![self.accountMode.password userNameRegex]) {
+                    [subscriber sendNext:@"用户名或者明码输入错误"];
+                    
+                    // 数据传送完毕，必须调用完成，否则命令永远处于执行状态
+                    [subscriber sendError:[[NSError alloc] initWithDomain:@"错误的" code:123456 userInfo:@{@"key":@"出错了"}]];
+                    // 直接返回
+                    return nil;
+                }
+                
                 // 参数
                 NSMutableDictionary* params = [NSMutableDictionary dictionary];
                 [params setValue:self.accountMode.username forKey:@"username"];
@@ -60,7 +71,7 @@
                 [NetworkEngine loginWithParams:params success:^(id dataObject) {
                     NSLog(@"%@", dataObject);
                     
-                    if ([self.accountMode.username.uppercaseString isEqualToString:@"HG"] && [self.accountMode.password.uppercaseString isEqualToString:@"HG123"]) {
+                    if ([self.accountMode.username.uppercaseString isEqualToString:@"HG"] && [self.accountMode.password.uppercaseString isEqualToString:@"HG123456"]) {
                         [subscriber sendNext:@"登录成功"];
                         
                         // 数据传送完毕，必须调用完成，否则命令永远处于执行状态

@@ -6,7 +6,7 @@
 //  Copyright © 2017年 EasyMoveMobile. All rights reserved.
 //
 
-#import "AFNetworking.h"
+#import <UIKit/UIKit.h>
 
 UIKIT_EXTERN NSString* const OKAAICPKey;
 

@@ -7,12 +7,17 @@ target 'NewStart' do
 
   # Pods for NewStart
 
-  pod 'AFNetworking'
+#  pod 'AFNetworking'
   pod 'SDWebImage'
   pod 'MJExtension'
   pod 'MJRefresh'
   pod 'Masonry'
 
   pod 'ReactiveCocoa', '~> 2.5'
+  
+  # 自己的开源代码
+  pod 'HGCategorys'
+  pod 'HGBaseClass'
+  pod 'NetWorkEngine'
 
 end

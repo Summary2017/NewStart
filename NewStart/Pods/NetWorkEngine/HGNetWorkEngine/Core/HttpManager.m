@@ -7,6 +7,7 @@
 //
 
 #import "HttpManager.h"
+#import "AFNetworking.h"
 #import "NSString+Secure.h"
 #import "NSString+UserDefaults.h"
 

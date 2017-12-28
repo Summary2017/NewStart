@@ -49,6 +49,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <connections>
+                                        <action selector="didChangedTextWithTextFiled:" destination="-1" eventType="editingChanged" id="YJ5-kV-xtu"/>
                                         <outlet property="delegate" destination="-1" id="UX5-1V-x77"/>
                                     </connections>
                                 </textField>
@@ -73,7 +74,7 @@
                                         <constraint firstAttribute="width" constant="60" id="YBa-SW-Gp4"/>
                                     </constraints>
                                 </imageView>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password  (HG123)" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="X4v-5m-Fsj">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password  (HG123456)" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="X4v-5m-Fsj">
                                     <rect key="frame" x="65" y="0.0" width="295" height="49.5"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -136,6 +137,12 @@
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <state key="normal" title="Login"/>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="学习MVVMReactiveCocoa时仿雷神的界面搭的" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5R-Sc-cFk">
+                    <rect key="frame" x="0.0" y="221.5" width="375" height="11"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -147,8 +154,11 @@
                 <constraint firstItem="5gO-fp-uLw" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-46" id="A0A-1P-Zx1"/>
                 <constraint firstItem="6Ge-wO-YlD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="DcF-0Y-CZJ"/>
                 <constraint firstItem="Qi1-vm-mfc" firstAttribute="top" secondItem="5gO-fp-uLw" secondAttribute="bottom" constant="22" id="cvs-zs-o6K"/>
+                <constraint firstItem="5gO-fp-uLw" firstAttribute="top" secondItem="u5R-Sc-cFk" secondAttribute="bottom" constant="5" id="lBA-28-LSS"/>
                 <constraint firstItem="5gO-fp-uLw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lOL-1N-4Di"/>
+                <constraint firstAttribute="trailing" secondItem="u5R-Sc-cFk" secondAttribute="trailing" id="lkk-Bh-WGG"/>
                 <constraint firstItem="fvq-Dm-DSg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="vBr-ic-lYV"/>
+                <constraint firstItem="u5R-Sc-cFk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xpj-6O-Mgu"/>
             </constraints>
             <point key="canvasLocation" x="34.5" y="135.5"/>
         </view>

@@ -1,0 +1,1 @@
+../../../HGBaseClass/HGBaseClass/HGView.h

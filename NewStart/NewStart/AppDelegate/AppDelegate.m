@@ -11,6 +11,7 @@
 #import "HGLoginController.h"
 #import "SDWebImageManager.h"
 #import "LoadingView.h"
+#import "IQKeyboardManager.h"
 
 @interface AppDelegate ()
 
@@ -32,6 +33,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    // 键盘的控制
+    [self keyboardManager];
+    
     // 创建 window
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
@@ -49,6 +53,14 @@
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+/** 键盘的控制 */
+- (void)keyboardManager {
+    IQKeyboardManager* keyboardManager = [IQKeyboardManager sharedManager];
+    // 隐藏toolbar
+    keyboardManager.enableAutoToolbar = NO;
+    keyboardManager.shouldResignOnTouchOutside = YES;
 }
 
 
