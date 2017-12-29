@@ -25,6 +25,12 @@
  */
 - (void)cancellWebImageMemory;
 
+/** 通过故事版名称创建InitialVC */
++ (instancetype)storyboardInitialWithName:(NSString *)sbName;
+
+/** 通过故事版名称创建以当前class命名的Identifier VC */
++ (instancetype)storyboardWithName:(NSString *)sbName;
+
 /**
  pop方法
  */

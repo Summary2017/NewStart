@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ewp-G3-82c">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--个性签名-->
+        <scene sceneID="Iew-Cb-2Ra">
+            <objects>
+                <tableViewController title="个性签名" id="ewp-G3-82c" customClass="SignatureController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="hg2-5E-0dY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SetupSignatureCell" rowHeight="120" id="D3M-oz-k7i" customClass="SetupSignatureCell">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D3M-oz-k7i" id="LDN-xk-q2g">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3aY-H0-JXJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="D3M-oz-k7i" id="EeM-JN-w8s"/>
+                                            </connections>
+                                        </textView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="赶快设置一下你特有的个性签名吧" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGb-ah-4fH">
+                                            <rect key="frame" x="10" y="10" width="199" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSe-8J-MU8">
+                                            <rect key="frame" x="335" y="95" width="30" height="14.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="3aY-H0-JXJ" firstAttribute="top" secondItem="LDN-xk-q2g" secondAttribute="top" id="5Kn-qg-oBM"/>
+                                        <constraint firstItem="uGb-ah-4fH" firstAttribute="top" secondItem="LDN-xk-q2g" secondAttribute="top" constant="10" id="Bwq-ZE-ua4"/>
+                                        <constraint firstAttribute="bottom" secondItem="3aY-H0-JXJ" secondAttribute="bottom" id="LLo-qS-NHb"/>
+                                        <constraint firstItem="3aY-H0-JXJ" firstAttribute="leading" secondItem="LDN-xk-q2g" secondAttribute="leading" id="Q1E-So-fKI"/>
+                                        <constraint firstItem="uGb-ah-4fH" firstAttribute="leading" secondItem="LDN-xk-q2g" secondAttribute="leading" constant="10" id="lda-Ay-8yD"/>
+                                        <constraint firstAttribute="trailing" secondItem="fSe-8J-MU8" secondAttribute="trailing" constant="10" id="qdq-vY-2WS"/>
+                                        <constraint firstAttribute="trailing" secondItem="3aY-H0-JXJ" secondAttribute="trailing" id="vAn-FU-ukp"/>
+                                        <constraint firstAttribute="bottom" secondItem="fSe-8J-MU8" secondAttribute="bottom" constant="10" id="yTl-CI-8FP"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="countLabel" destination="fSe-8J-MU8" id="M0m-Bb-Cm5"/>
+                                    <outlet property="placeholderLabel" destination="uGb-ah-4fH" id="Pcr-0L-SZy"/>
+                                    <outlet property="textView" destination="3aY-H0-JXJ" id="Jzl-zB-h9c"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="ewp-G3-82c" id="SV2-rh-V9z"/>
+                            <outlet property="delegate" destination="ewp-G3-82c" id="Thz-FN-sdA"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="个性签名" id="wmS-hG-IKe"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8vh-vy-A2y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2914" y="107"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oVa-LZ-QXR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WFA-gD-cPg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GSo-aF-2gd">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ewp-G3-82c" kind="relationship" relationship="rootViewController" id="isD-Hu-rVm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4bJ-en-XSA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2106" y="107"/>
+        </scene>
+    </scenes>
+</document>

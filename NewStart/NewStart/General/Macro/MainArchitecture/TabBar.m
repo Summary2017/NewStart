@@ -14,7 +14,7 @@
     self = [super initWithFrame:frame];
     
     // 是一张小图片(width小, height正好, 所以要在不影响中间部分的情况下,将width拉长.)
-    UIImage* image_ = [UIImage imageNamed:@"ac_tabbar_bg"];
+    UIImage* image_ = [UIImage imageNamed:@"tabbar_bg"];
     
     // image_的尺寸
     CGSize imageSize = image_.size;
@@ -55,6 +55,8 @@
     [self setBackgroundImage:img];
     [self setShadowImage:img];
     
+    self.backgroundColor = [UIColor whiteColor];
+    
     return self;
 }
 
@@ -75,8 +77,10 @@
 
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
     
-    if (CGRectContainsPoint(self.centerBtn.frame, point)) {
-        return self.centerBtn;
+    if (!self.hidden) {
+        if (CGRectContainsPoint(self.centerBtn.frame, point)) {
+            return self.centerBtn;
+        }
     }
     
     return [super hitTest:point withEvent:event];
@@ -89,13 +93,11 @@
     CGFloat h = self.bounds.size.height;
     
     CGFloat btnx = 0;
-    CGFloat btny = 0;
     
     // 5.0是tabbar中的控件的数量
-    CGFloat width = self.bounds.size.width/5.0;
-    CGFloat height = self.bounds.size.height;
+    CGFloat width = w/5.0;
     
-    int i=0;
+    int i = 0;
     for (UIView *btn in self.subviews)
     {
         // 判断是否是系统自带的UITabBarButton类型的控件
@@ -104,14 +106,20 @@
                 i = 3;
             }
             
+            CGFloat btny = btn.frame.origin.y;
+            CGFloat height = btn.frame.size.height;
             btnx = i*width;
             btn.frame = CGRectMake(btnx, btny, width, height);
-            
+
             i++;
+            
+            h = btny + height*0.5;
         }
     }
     // 设置自定义button的位置
-    self.centerBtn.center = CGPointMake(w*0.5, h*0.5 - 8.0);
+    self.centerBtn.center = CGPointMake(w*0.5, h - 8.0);
+    
+
 }
 
 @end

@@ -9,6 +9,7 @@
 #import "Public.h"
 #import "AppDelegate.h"
 #import "LoadingView.h"
+#import <sys/utsname.h>
 
 @implementation Public
 
@@ -20,6 +21,17 @@
 /** 隐藏加载框 */
 + (void)hideLoadingView {
     [HGSharedAppDelegate.loadingView loadingHidden];
+}
+
+static int kisIPhoneXFlag = -1;
+static BOOL kisIPhoneX = NO;
+// 是否为iPhone X 设备
++ (BOOL)isIPhoneX {
+    if (kisIPhoneXFlag == -1) {
+        kisIPhoneXFlag = 1;
+        kisIPhoneX = (UI_SCREEN_HEIGHT == 812);
+    }
+    return kisIPhoneX;
 }
 
 @end

@@ -14,8 +14,12 @@
 #import "MineController.h"
 #import "TabBar.h"
 #import "NSString+Color.h"
+#import "ECPublishView.h"
+#import "NewStart-Swift.h"
 
-@interface TabBarController ()
+@interface TabBarController () <ECPublishViewDelegate>
+
+@property (strong, nonatomic) ECPublishView *publishView;
 
 @end
 
@@ -55,17 +59,27 @@
     TabBar* tabBar = [[TabBar alloc] init];
     tabBar.centerBtn = centerBtn;
     [self setValue:tabBar forKey:@"tabBar"];
+    
+    
+    CGFloat margin = [Public isIPhoneX]?83:49;
+    // 中间功能
+    CGPoint arrowOrigin = CGPointMake(UI_SCREEN_WIDTH/2, UI_SCREEN_HEIGHT - 64 - 20 - margin);
+    ECPublishView *publishView = [ECPublishView piblishViewWithArrowOrigin:arrowOrigin];
+    publishView.delegate = self;
+    self.publishView = publishView;
 }
 
 // 设置所有的子视图
 - (void)setupAllChildVC {
     [self setupChildVC:[[HomeController alloc] init] title:@"首页" image:@"tabbar_home"];
     
-    [self setupChildVC:[[MessageController alloc] init] title:@"消息" image:@"tabbar_message_center"];
+    MessageController* msgVC = [MessageController storyboardInitialWithName:@"Message"];
+    [self setupChildVC:msgVC title:@"消息" image:@"tabbar_message_center"];
     
     [self setupChildVC:[[OrderController alloc] init] title:@"订单" image:@"Order"];
     
-    [self setupChildVC:[[MineController alloc] init] title:@"我的" image:@"tabbar_profile"];
+    MineController* mineVC = [MineController storyboardInitialWithName:@"Mine"];
+    [self setupChildVC:mineVC title:@"我的" image:@"tabbar_profile"];
 }
 
 // 初始化子控制器
@@ -84,7 +98,30 @@
 
 // 中间按钮点击事件
 - (void)centerClick {
-    NSLog(@"centerClick");
+    if(self.publishView.isShow) {
+        [self.publishView disappear];
+    } else {
+        [self.publishView show];
+    }
 }
+
+#pragma mark -
+#pragma mark - ECPublishViewDelegate
+- (void)didPressPublishName:(NSString *)controllerName {
+    DLog(@"%@", controllerName);
+    
+    BrowserController* browerVC = [[BrowserController alloc] init];
+    browerVC.title =  controllerName;
+    if ([controllerName isEqualToString:@"我的代码"]) {
+        browerVC.urlSTR = @"https://github.com/Summary2017";
+    } else {
+        browerVC.urlSTR = @"https://www.jianshu.com/p/c0e611fc0548";
+    }
+    
+    UINavigationController* navVC = (UINavigationController*)self.selectedViewController;
+    
+    [navVC pushViewController:browerVC animated:YES];
+}
+
 
 @end

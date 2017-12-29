@@ -50,6 +50,19 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+/** 通过故事版名称创建InitialVC */
++ (instancetype)storyboardInitialWithName:(NSString *)sbName {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:sbName bundle:nil];
+    return [storyboard instantiateInitialViewController];
+}
+
+/** 通过故事版名称创建以当前class命名的Identifier VC */
++ (instancetype)storyboardWithName:(NSString *)sbName {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:sbName bundle:nil];
+    return [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass(self)];
+}
+
+
 /**
  当内存吃紧的时候,取消当前下载/清除内存总所有的图片
  */

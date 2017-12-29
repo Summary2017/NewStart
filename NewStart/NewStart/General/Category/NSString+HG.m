@@ -15,7 +15,7 @@
  用户名 匹配
  */
 - (BOOL)userNameRegex {
-    return [self hg_regexMatchWithType:HGRegexTypeDigital|HGRegexTypeCharacter|HGRegexTypeUnderline|HGRegexTypeDot|HGRegexTypeAT];
+    return [self hg_regexMatchWithType:HGRegexTypeDigital|HGRegexTypeCharacter|HGRegexTypeUnderline|HGRegexTypeDot|HGRegexTypeAT|HGRegexTypeChinese];
 }
 
 

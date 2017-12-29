@@ -41,11 +41,11 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     // 根控制器
-//    self.window.rootViewController = [[TabBarController alloc] init];
+    self.window.rootViewController = [[TabBarController alloc] init];
     {
-        HGLoginController* loginVC = [[HGLoginController alloc] init];
-        UINavigationController* loginNavVC = [[UINavigationController alloc] initWithRootViewController:loginVC];
-        self.window.rootViewController = loginNavVC;
+//        HGLoginController* loginVC = [[HGLoginController alloc] init];
+//        UINavigationController* loginNavVC = [[UINavigationController alloc] initWithRootViewController:loginVC];
+//        self.window.rootViewController = loginNavVC;
     }
     
     

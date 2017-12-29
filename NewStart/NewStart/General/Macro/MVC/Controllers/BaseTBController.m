@@ -34,8 +34,7 @@
     [self setupTBView];
 }
 
-
-#pragma mark - UITableViewDataSource, UITableViewDelegate
+// 添加UITableView
 - (void)setupTBView {
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:self.tableViewStyle];
     tableView.dataSource = self;
@@ -51,18 +50,10 @@
     
     [self.view addSubview:tableView];
     self.tableView = tableView;
-    
-    // iOS 11 适配
-    // Xcode8 上
-    self.tableView.estimatedRowHeight = 0;
-    self.tableView.estimatedSectionFooterHeight = 0;
-    self.tableView.estimatedSectionHeaderHeight = 0;
-    // 修复在 iOS 11 下。push/pop 控制器的时候 TableView 有自下而上的动画。
-    if (@available(iOS 11.0, *)) {
-        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-    }
 }
 
+#pragma mark -
+#pragma mark - UITableViewDataSource, UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 1;
 }
@@ -74,9 +65,10 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BaseCell* cell = [BaseCell cell:tableView];
-
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.textLabel.numberOfLines = 0;
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
-    cell.textLabel.text = NSStringFromClass(self.class);
+    cell.textLabel.text = HGStr(@"%@\n\n暂无数据", NSStringFromClass(self.class));
 
     return cell;
 }

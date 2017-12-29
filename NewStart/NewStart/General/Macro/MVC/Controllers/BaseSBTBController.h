@@ -11,6 +11,7 @@
  */
 
 #import <UIKit/UIKit.h>
+#import "UIViewController+Base.h"
 
 @interface BaseSBTBController : UITableViewController
 

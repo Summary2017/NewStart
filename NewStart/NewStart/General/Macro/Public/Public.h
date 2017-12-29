@@ -20,4 +20,7 @@
 /** 隐藏加载框 */
 + (void)hideLoadingView;
 
+/** 是否为iPhone X设备 */
++ (BOOL)isIPhoneX;
+
 @end

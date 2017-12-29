@@ -6,8 +6,8 @@
 //  Copyright © 2017年 CoderHG. All rights reserved.
 //
 
-#import "BaseTBController.h"
+#import "BaseSBTBController.h"
 
-@interface MessageController : BaseTBController
+@interface MessageController : BaseSBTBController
 
 @end

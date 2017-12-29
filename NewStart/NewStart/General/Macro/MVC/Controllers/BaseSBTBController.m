@@ -8,6 +8,7 @@
 
 #import "BaseSBTBController.h"
 #import "UIViewController+Base.h"
+#import "BaseCell.h"
 
 @interface BaseSBTBController ()
 
