@@ -55,7 +55,7 @@
             return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
                 @strongify(self)
                 
-                if (![self.accountMode.username passwpordRegex] || ![self.accountMode.password userNameRegex]) {
+                if (![self.accountMode.username userNameRegex] || ![self.accountMode.password passwpordRegex]) {
                     [subscriber sendNext:@"用户名或者明码输入错误"];
                     
                     // 数据传送完毕，必须调用完成，否则命令永远处于执行状态
