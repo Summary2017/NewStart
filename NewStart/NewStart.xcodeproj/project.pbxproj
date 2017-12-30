@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		5100E8B21FF63DB3007ACA28 /* ECPublishView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5100E8B11FF63DB3007ACA28 /* ECPublishView.m */; };
 		5100E8B81FF63E95007ACA28 /* UIView+HG.m in Sources */ = {isa = PBXBuildFile; fileRef = 5100E8B71FF63E95007ACA28 /* UIView+HG.m */; };
+		51365FBA1FF7385200ADA079 /* MoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51365FB91FF7385200ADA079 /* MoreController.m */; };
+		51365FBD1FF7520700ADA079 /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51365FBC1FF7520700ADA079 /* HomeCell.m */; };
+		51365FC01FF752E100ADA079 /* HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 51365FBF1FF752E100ADA079 /* HomeModel.m */; };
+		51365FC21FF754F600ADA079 /* HomeData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51365FC11FF754F600ADA079 /* HomeData.plist */; };
+		51365FE71FF76BC900ADA079 /* NSString+SIZE.m in Sources */ = {isa = PBXBuildFile; fileRef = 51365FE61FF76BC900ADA079 /* NSString+SIZE.m */; };
+		51365FED1FF7893500ADA079 /* HomeBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51365FEC1FF7893500ADA079 /* HomeBottomView.m */; };
+		51365FF11FF7953D00ADA079 /* HomeImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51365FEF1FF7953D00ADA079 /* HomeImageCell.m */; };
+		51365FF21FF7953D00ADA079 /* HomeImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51365FF01FF7953D00ADA079 /* HomeImageCell.xib */; };
 		5142B79B1FF36E2D00D904CB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5142B7931FF36E2C00D904CB /* Info.plist */; };
 		5142B79C1FF36E2D00D904CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5142B7941FF36E2C00D904CB /* main.m */; };
 		5142B79D1FF36E2D00D904CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5142B7961FF36E2D00D904CB /* LaunchScreen.storyboard */; };
@@ -90,6 +98,20 @@
 		5100E8B11FF63DB3007ACA28 /* ECPublishView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECPublishView.m; sourceTree = "<group>"; };
 		5100E8B61FF63E95007ACA28 /* UIView+HG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HG.h"; sourceTree = "<group>"; };
 		5100E8B71FF63E95007ACA28 /* UIView+HG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HG.m"; sourceTree = "<group>"; };
+		51365FB81FF7385200ADA079 /* MoreController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreController.h; sourceTree = "<group>"; };
+		51365FB91FF7385200ADA079 /* MoreController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoreController.m; sourceTree = "<group>"; };
+		51365FBB1FF7520700ADA079 /* HomeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
+		51365FBC1FF7520700ADA079 /* HomeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
+		51365FBE1FF752E100ADA079 /* HomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeModel.h; sourceTree = "<group>"; };
+		51365FBF1FF752E100ADA079 /* HomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeModel.m; sourceTree = "<group>"; };
+		51365FC11FF754F600ADA079 /* HomeData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = HomeData.plist; sourceTree = "<group>"; };
+		51365FE51FF76BC900ADA079 /* NSString+SIZE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+SIZE.h"; sourceTree = "<group>"; };
+		51365FE61FF76BC900ADA079 /* NSString+SIZE.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+SIZE.m"; sourceTree = "<group>"; };
+		51365FEB1FF7893500ADA079 /* HomeBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeBottomView.h; sourceTree = "<group>"; };
+		51365FEC1FF7893500ADA079 /* HomeBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeBottomView.m; sourceTree = "<group>"; };
+		51365FEE1FF7953D00ADA079 /* HomeImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeImageCell.h; sourceTree = "<group>"; };
+		51365FEF1FF7953D00ADA079 /* HomeImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeImageCell.m; sourceTree = "<group>"; };
+		51365FF01FF7953D00ADA079 /* HomeImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeImageCell.xib; sourceTree = "<group>"; };
 		5142B7491FF35DB200D904CB /* NewStart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewStart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5142B7931FF36E2C00D904CB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5142B7941FF36E2C00D904CB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -354,6 +376,8 @@
 				5142B9051FF3FC3900D904CB /* UILabel+LockScreen.m */,
 				5142BA211FF54AFF00D904CB /* NSString+HG.h */,
 				5142BA221FF54AFF00D904CB /* NSString+HG.m */,
+				51365FE51FF76BC900ADA079 /* NSString+SIZE.h */,
+				51365FE61FF76BC900ADA079 /* NSString+SIZE.m */,
 				5100E8B61FF63E95007ACA28 /* UIView+HG.h */,
 				5100E8B71FF63E95007ACA28 /* UIView+HG.m */,
 				5154CD681FF647EB005F3152 /* UICollectionView+HG.h */,
@@ -500,6 +524,13 @@
 		5142B7E51FF3B81700D904CB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				51365FBB1FF7520700ADA079 /* HomeCell.h */,
+				51365FBC1FF7520700ADA079 /* HomeCell.m */,
+				51365FEE1FF7953D00ADA079 /* HomeImageCell.h */,
+				51365FEF1FF7953D00ADA079 /* HomeImageCell.m */,
+				51365FF01FF7953D00ADA079 /* HomeImageCell.xib */,
+				51365FEB1FF7893500ADA079 /* HomeBottomView.h */,
+				51365FEC1FF7893500ADA079 /* HomeBottomView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -507,6 +538,9 @@
 		5142B7E61FF3B81F00D904CB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				51365FBE1FF752E100ADA079 /* HomeModel.h */,
+				51365FBF1FF752E100ADA079 /* HomeModel.m */,
+				51365FC11FF754F600ADA079 /* HomeData.plist */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -516,6 +550,8 @@
 			children = (
 				5142B7F11FF3B97100D904CB /* HomeController.h */,
 				5142B7F21FF3B97100D904CB /* HomeController.m */,
+				51365FB81FF7385200ADA079 /* MoreController.h */,
+				51365FB91FF7385200ADA079 /* MoreController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -868,8 +904,10 @@
 				5142B79B1FF36E2D00D904CB /* Info.plist in Resources */,
 				5142B8CE1FF3D22700D904CB /* HGAuthorizationController.xib in Resources */,
 				51A9B71A1FF5EEAC000284EF /* Message.storyboard in Resources */,
+				51365FF21FF7953D00ADA079 /* HomeImageCell.xib in Resources */,
 				5142B8D01FF3D22700D904CB /* HGLoginController.xib in Resources */,
 				5142B79F1FF36E2D00D904CB /* Assets.xcassets in Resources */,
+				51365FC21FF754F600ADA079 /* HomeData.plist in Resources */,
 				514FD8601FF615EC0096F092 /* Mine.storyboard in Resources */,
 				5142B8B71FF3D21A00D904CB /* IQKeyboardManager.bundle in Resources */,
 				5142B79D1FF36E2D00D904CB /* LaunchScreen.storyboard in Resources */,
@@ -938,8 +976,10 @@
 				5142B7D01FF37D1800D904CB /* BaseTBController.m in Sources */,
 				5142B8CF1FF3D22700D904CB /* HGLoginController.m in Sources */,
 				5142B7F31FF3B97100D904CB /* HomeController.m in Sources */,
+				51365FF11FF7953D00ADA079 /* HomeImageCell.m in Sources */,
 				514FD8661FF6268B0096F092 /* SignatureController.m in Sources */,
 				5154CD671FF64798005F3152 /* SuffingView.m in Sources */,
+				51365FC01FF752E100ADA079 /* HomeModel.m in Sources */,
 				5142B9011FF3F57200D904CB /* LoadingView.m in Sources */,
 				5142B8D31FF3D22700D904CB /* HGLoginButton.m in Sources */,
 				5142B8AC1FF3D21A00D904CB /* IQUIView+Hierarchy.m in Sources */,
@@ -966,6 +1006,8 @@
 				5142B79C1FF36E2D00D904CB /* main.m in Sources */,
 				5142B7D31FF37F4100D904CB /* BaseButton.m in Sources */,
 				5142B7E01FF3B4AD00D904CB /* TabBar.m in Sources */,
+				51365FBA1FF7385200ADA079 /* MoreController.m in Sources */,
+				51365FED1FF7893500ADA079 /* HomeBottomView.m in Sources */,
 				5142B7B41FF377F100D904CB /* Public.m in Sources */,
 				5142B8AD1FF3D21A00D904CB /* IQUIViewController+Additions.m in Sources */,
 				5142B7FF1FF3BE0600D904CB /* NSString+Color.m in Sources */,
@@ -988,6 +1030,7 @@
 				514FD85E1FF606D70096F092 /* BrowserController.swift in Sources */,
 				5142B8B01FF3D21A00D904CB /* IQKeyboardReturnKeyHandler.m in Sources */,
 				5142B8B51FF3D21A00D904CB /* IQToolbar.m in Sources */,
+				51365FBD1FF7520700ADA079 /* HomeCell.m in Sources */,
 				514FD8581FF5FBEA0096F092 /* BaseHFView.m in Sources */,
 				5142B7F91FF3B99600D904CB /* OrderController.m in Sources */,
 				5142B7D71FF3816B00D904CB /* TabBarController.m in Sources */,
@@ -995,6 +1038,7 @@
 				5154CD6A1FF647EB005F3152 /* UICollectionView+HG.m in Sources */,
 				5154CD651FF64798005F3152 /* HomeADVModel.m in Sources */,
 				5142B7A31FF36F9400D904CB /* AppDelegate.m in Sources */,
+				51365FE71FF76BC900ADA079 /* NSString+SIZE.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

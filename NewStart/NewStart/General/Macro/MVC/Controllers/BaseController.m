@@ -19,6 +19,8 @@
     // Do any additional setup after loading the view.
     // 非主页控制器添加返回按钮
     [self addBackButton];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning {

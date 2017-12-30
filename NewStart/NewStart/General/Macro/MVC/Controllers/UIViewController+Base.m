@@ -15,7 +15,7 @@
  非主页控制器添加返回按钮
  */
 - (void)addBackButton {
-    if (self.navigationController.viewControllers.count <= 1) {
+    if (self.navigationController.viewControllers.count <= 1 && ![NSStringFromClass(self.class) isEqualToString:@"MoreController"]) {
         return;
     }
     
