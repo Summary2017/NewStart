@@ -10,7 +10,7 @@
 #import "NSString+SIZE.h"
 
 // 中间的间距
-CGFloat const MidMargin = 10.0;
+CGFloat const MidMargin = 5.0;
 /** 标题字体大小 */
 CGFloat const TitleFontSize = 18.0;
 
