@@ -6,8 +6,8 @@
 //  Copyright © 2016年 CoderHG. All rights reserved.
 //
 
-#import "BaseController.h"
+#import <UIKit/UIKit.h>
 
-@interface HGLoginController : BaseController
+@interface HGLoginController : UIViewController
 
 @end
