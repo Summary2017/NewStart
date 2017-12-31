@@ -6,8 +6,8 @@
 //  Copyright © 2017年 CoderHG. All rights reserved.
 //
 
-#import "BaseTBController.h"
+#import "BaseController.h"
 
-@interface OrderController : BaseTBController
+@interface OrderController : BaseController
 
 @end

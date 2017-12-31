@@ -10,5 +10,7 @@
 #define Common_pch
 
 #import "Public.h"
+#import "GlobalConsts.h"
+#import "UIView+HG.h"
 
 #endif /* Common_pch */

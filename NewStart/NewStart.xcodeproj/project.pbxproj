@@ -88,6 +88,18 @@
 		5154CD661FF64798005F3152 /* SuffingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5154CD621FF64798005F3152 /* SuffingCell.m */; };
 		5154CD671FF64798005F3152 /* SuffingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5154CD641FF64798005F3152 /* SuffingView.m */; };
 		5154CD6A1FF647EB005F3152 /* UICollectionView+HG.m in Sources */ = {isa = PBXBuildFile; fileRef = 5154CD691FF647EB005F3152 /* UICollectionView+HG.m */; };
+		517BB6DE1FF89E2400672A88 /* HGContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 517BB6BD1FF89E2400672A88 /* HGContentCell.m */; };
+		517BB6DF1FF89E2400672A88 /* HGContentMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 517BB6BF1FF89E2400672A88 /* HGContentMode.m */; };
+		517BB6E01FF89E2400672A88 /* HGContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 517BB6C11FF89E2400672A88 /* HGContentView.m */; };
+		517BB6E11FF89E2400672A88 /* HGSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 517BB6C41FF89E2400672A88 /* HGSelectCell.m */; };
+		517BB6E21FF89E2400672A88 /* HGSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 517BB6C61FF89E2400672A88 /* HGSelectView.m */; };
+		517BB6E31FF89E2400672A88 /* HGTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517BB6C81FF89E2400672A88 /* HGTableTableViewController.m */; };
+		517BB6E41FF89E2400672A88 /* HGWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 517BB6CA1FF89E2400672A88 /* HGWebView.m */; };
+		517BB6E51FF89E2400672A88 /* HGMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 517BB6CD1FF89E2400672A88 /* HGMainView.m */; };
+		517BB6E91FF89E2400672A88 /* HGLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 517BB6D71FF89E2400672A88 /* HGLineView.m */; };
+		517BB6EA1FF89E2400672A88 /* HGTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 517BB6D91FF89E2400672A88 /* HGTabCell.m */; };
+		517BB6EB1FF89E2400672A88 /* HGTabMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 517BB6DB1FF89E2400672A88 /* HGTabMode.m */; };
+		517BB6EC1FF89E2400672A88 /* HGTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 517BB6DD1FF89E2400672A88 /* HGTabView.m */; };
 		51A9B71A1FF5EEAC000284EF /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51A9B7191FF5EEAC000284EF /* Message.storyboard */; };
 		72D73540887AB249B4840BC6 /* libPods-NewStart.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8AE4C9DB71E00480F1CDA04 /* libPods-NewStart.a */; };
 /* End PBXBuildFile section */
@@ -248,6 +260,30 @@
 		5154CD641FF64798005F3152 /* SuffingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuffingView.m; sourceTree = "<group>"; };
 		5154CD681FF647EB005F3152 /* UICollectionView+HG.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+HG.h"; sourceTree = "<group>"; };
 		5154CD691FF647EB005F3152 /* UICollectionView+HG.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+HG.m"; sourceTree = "<group>"; };
+		517BB6BC1FF89E2400672A88 /* HGContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGContentCell.h; sourceTree = "<group>"; };
+		517BB6BD1FF89E2400672A88 /* HGContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGContentCell.m; sourceTree = "<group>"; };
+		517BB6BE1FF89E2400672A88 /* HGContentMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGContentMode.h; sourceTree = "<group>"; };
+		517BB6BF1FF89E2400672A88 /* HGContentMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGContentMode.m; sourceTree = "<group>"; };
+		517BB6C01FF89E2400672A88 /* HGContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGContentView.h; sourceTree = "<group>"; };
+		517BB6C11FF89E2400672A88 /* HGContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGContentView.m; sourceTree = "<group>"; };
+		517BB6C31FF89E2400672A88 /* HGSelectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGSelectCell.h; sourceTree = "<group>"; };
+		517BB6C41FF89E2400672A88 /* HGSelectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGSelectCell.m; sourceTree = "<group>"; };
+		517BB6C51FF89E2400672A88 /* HGSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGSelectView.h; sourceTree = "<group>"; };
+		517BB6C61FF89E2400672A88 /* HGSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGSelectView.m; sourceTree = "<group>"; };
+		517BB6C71FF89E2400672A88 /* HGTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGTableTableViewController.h; sourceTree = "<group>"; };
+		517BB6C81FF89E2400672A88 /* HGTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGTableTableViewController.m; sourceTree = "<group>"; };
+		517BB6C91FF89E2400672A88 /* HGWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGWebView.h; sourceTree = "<group>"; };
+		517BB6CA1FF89E2400672A88 /* HGWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGWebView.m; sourceTree = "<group>"; };
+		517BB6CC1FF89E2400672A88 /* HGMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGMainView.h; sourceTree = "<group>"; };
+		517BB6CD1FF89E2400672A88 /* HGMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGMainView.m; sourceTree = "<group>"; };
+		517BB6D61FF89E2400672A88 /* HGLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGLineView.h; sourceTree = "<group>"; };
+		517BB6D71FF89E2400672A88 /* HGLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGLineView.m; sourceTree = "<group>"; };
+		517BB6D81FF89E2400672A88 /* HGTabCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGTabCell.h; sourceTree = "<group>"; };
+		517BB6D91FF89E2400672A88 /* HGTabCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGTabCell.m; sourceTree = "<group>"; };
+		517BB6DA1FF89E2400672A88 /* HGTabMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGTabMode.h; sourceTree = "<group>"; };
+		517BB6DB1FF89E2400672A88 /* HGTabMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGTabMode.m; sourceTree = "<group>"; };
+		517BB6DC1FF89E2400672A88 /* HGTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGTabView.h; sourceTree = "<group>"; };
+		517BB6DD1FF89E2400672A88 /* HGTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGTabView.m; sourceTree = "<group>"; };
 		51A9B7191FF5EEAC000284EF /* Message.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
 		B8AE4C9DB71E00480F1CDA04 /* libPods-NewStart.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NewStart.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0360F94D00D6F591DF2E04E /* Pods-NewStart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewStart.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewStart/Pods-NewStart.release.xcconfig"; sourceTree = "<group>"; };
@@ -389,6 +425,7 @@
 		5142B7A81FF3727200D904CB /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				517BB6BA1FF89E2400672A88 /* HGTabView */,
 				5154CD5C1FF64798005F3152 /* SuffingView */,
 				5142B87B1FF3D21A00D904CB /* IQKeyboardManager */,
 				5142B8A11FF3D21A00D904CB /* Vertigo */,
@@ -829,6 +866,69 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		517BB6BA1FF89E2400672A88 /* HGTabView */ = {
+			isa = PBXGroup;
+			children = (
+				517BB6BB1FF89E2400672A88 /* ContentView */,
+				517BB6C21FF89E2400672A88 /* Example */,
+				517BB6CB1FF89E2400672A88 /* Mian */,
+				517BB6D51FF89E2400672A88 /* TabView */,
+			);
+			path = HGTabView;
+			sourceTree = "<group>";
+		};
+		517BB6BB1FF89E2400672A88 /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				517BB6BC1FF89E2400672A88 /* HGContentCell.h */,
+				517BB6BD1FF89E2400672A88 /* HGContentCell.m */,
+				517BB6BE1FF89E2400672A88 /* HGContentMode.h */,
+				517BB6BF1FF89E2400672A88 /* HGContentMode.m */,
+				517BB6C01FF89E2400672A88 /* HGContentView.h */,
+				517BB6C11FF89E2400672A88 /* HGContentView.m */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
+		517BB6C21FF89E2400672A88 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				517BB6C31FF89E2400672A88 /* HGSelectCell.h */,
+				517BB6C41FF89E2400672A88 /* HGSelectCell.m */,
+				517BB6C51FF89E2400672A88 /* HGSelectView.h */,
+				517BB6C61FF89E2400672A88 /* HGSelectView.m */,
+				517BB6C71FF89E2400672A88 /* HGTableTableViewController.h */,
+				517BB6C81FF89E2400672A88 /* HGTableTableViewController.m */,
+				517BB6C91FF89E2400672A88 /* HGWebView.h */,
+				517BB6CA1FF89E2400672A88 /* HGWebView.m */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		517BB6CB1FF89E2400672A88 /* Mian */ = {
+			isa = PBXGroup;
+			children = (
+				517BB6CC1FF89E2400672A88 /* HGMainView.h */,
+				517BB6CD1FF89E2400672A88 /* HGMainView.m */,
+			);
+			path = Mian;
+			sourceTree = "<group>";
+		};
+		517BB6D51FF89E2400672A88 /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				517BB6D61FF89E2400672A88 /* HGLineView.h */,
+				517BB6D71FF89E2400672A88 /* HGLineView.m */,
+				517BB6D81FF89E2400672A88 /* HGTabCell.h */,
+				517BB6D91FF89E2400672A88 /* HGTabCell.m */,
+				517BB6DA1FF89E2400672A88 /* HGTabMode.h */,
+				517BB6DB1FF89E2400672A88 /* HGTabMode.m */,
+				517BB6DC1FF89E2400672A88 /* HGTabView.h */,
+				517BB6DD1FF89E2400672A88 /* HGTabView.m */,
+			);
+			path = TabView;
+			sourceTree = "<group>";
+		};
 		C9B8C2CA8E16579B050EDCC8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -986,11 +1086,14 @@
 				514FD8631FF6226A0096F092 /* PersonInforController.m in Sources */,
 				5142B8D11FF3D22700D904CB /* HGInputInfoModel.m in Sources */,
 				5142BA231FF54B0000D904CB /* NSString+HG.m in Sources */,
+				517BB6DE1FF89E2400672A88 /* HGContentCell.m in Sources */,
 				5154CD661FF64798005F3152 /* SuffingCell.m in Sources */,
 				5142B8B81FF3D21A00D904CB /* TGRImageViewController.m in Sources */,
 				5142B7DD1FF3866E00D904CB /* GlobalConsts.m in Sources */,
+				517BB6E51FF89E2400672A88 /* HGMainView.m in Sources */,
 				5142B8B21FF3D21A00D904CB /* IQBarButtonItem.m in Sources */,
 				5142B8B61FF3D21A00D904CB /* IQUIView+IQKeyboardToolbar.m in Sources */,
+				517BB6EB1FF89E2400672A88 /* HGTabMode.m in Sources */,
 				5142B8A91FF3D21A00D904CB /* IQNSArray+Sort.m in Sources */,
 				5142B7CD1FF37CCB00D904CB /* BaseSBTBController.m in Sources */,
 				5142B7BE1FF37AB800D904CB /* BaseCell.m in Sources */,
@@ -1006,24 +1109,32 @@
 				5142B79C1FF36E2D00D904CB /* main.m in Sources */,
 				5142B7D31FF37F4100D904CB /* BaseButton.m in Sources */,
 				5142B7E01FF3B4AD00D904CB /* TabBar.m in Sources */,
+				517BB6EA1FF89E2400672A88 /* HGTabCell.m in Sources */,
 				51365FBA1FF7385200ADA079 /* MoreController.m in Sources */,
 				51365FED1FF7893500ADA079 /* HomeBottomView.m in Sources */,
+				517BB6E01FF89E2400672A88 /* HGContentView.m in Sources */,
 				5142B7B41FF377F100D904CB /* Public.m in Sources */,
 				5142B8AD1FF3D21A00D904CB /* IQUIViewController+Additions.m in Sources */,
+				517BB6EC1FF89E2400672A88 /* HGTabView.m in Sources */,
+				517BB6E11FF89E2400672A88 /* HGSelectCell.m in Sources */,
 				5142B7FF1FF3BE0600D904CB /* NSString+Color.m in Sources */,
 				5142B7BB1FF37AA600D904CB /* BaseModel.m in Sources */,
 				5100E8B81FF63E95007ACA28 /* UIView+HG.m in Sources */,
 				514FD85B1FF5FC090096F092 /* MessageHFView.m in Sources */,
 				5142B7C71FF37B4500D904CB /* UIViewController+Base.m in Sources */,
+				517BB6E91FF89E2400672A88 /* HGLineView.m in Sources */,
 				5142B8D21FF3D22700D904CB /* HGLoginViewMode.m in Sources */,
 				514FD8521FF5EFB00096F092 /* MessageCell.m in Sources */,
 				5142B7C41FF37B0100D904CB /* BaseController.m in Sources */,
 				5142B8B31FF3D21A00D904CB /* IQPreviousNextView.m in Sources */,
 				5142B8AB1FF3D21A00D904CB /* IQUITextFieldView+Additions.m in Sources */,
 				5142B7B11FF377C800D904CB /* NetworkEngine+Login.m in Sources */,
+				517BB6DF1FF89E2400672A88 /* HGContentMode.m in Sources */,
 				5142B8AF1FF3D21A00D904CB /* IQKeyboardManager.m in Sources */,
 				5142B8D61FF3D28F00D904CB /* UIColor+HG.m in Sources */,
+				517BB6E21FF89E2400672A88 /* HGSelectView.m in Sources */,
 				5100E8B21FF63DB3007ACA28 /* ECPublishView.m in Sources */,
+				517BB6E31FF89E2400672A88 /* HGTableTableViewController.m in Sources */,
 				514FD84F1FF5EF910096F092 /* MessageModel.m in Sources */,
 				5142B8AE1FF3D21A00D904CB /* IQUIWindow+Hierarchy.m in Sources */,
 				514FD8551FF5F1300096F092 /* MessageGroupModel.m in Sources */,
@@ -1034,6 +1145,7 @@
 				514FD8581FF5FBEA0096F092 /* BaseHFView.m in Sources */,
 				5142B7F91FF3B99600D904CB /* OrderController.m in Sources */,
 				5142B7D71FF3816B00D904CB /* TabBarController.m in Sources */,
+				517BB6E41FF89E2400672A88 /* HGWebView.m in Sources */,
 				5142B7AE1FF377AD00D904CB /* NetworkEngine.m in Sources */,
 				5154CD6A1FF647EB005F3152 /* UICollectionView+HG.m in Sources */,
 				5154CD651FF64798005F3152 /* HomeADVModel.m in Sources */,

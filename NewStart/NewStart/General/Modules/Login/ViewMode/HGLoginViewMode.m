@@ -51,7 +51,7 @@
         @weakify(self);
         _loginCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
             // 点击按钮
-            NSLog(@"开始了");
+            DLog(@"开始了");
             return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
                 @strongify(self)
                 
@@ -69,7 +69,7 @@
                 [params setValue:self.accountMode.username forKey:@"username"];
                 [params setValue:self.accountMode.password forKey:@"username"];
                 [NetworkEngine loginWithParams:params success:^(id dataObject) {
-                    NSLog(@"%@", dataObject);
+                    DLog(@"%@", dataObject);
                     
                     if ([self.accountMode.username.uppercaseString isEqualToString:@"HG"] && [self.accountMode.password.uppercaseString isEqualToString:@"HG123456"]) {
                         [subscriber sendNext:@"登录成功"];
@@ -84,7 +84,7 @@
                     }
                     
                 } failure:^(NSError *error) {
-                    NSLog(@"%@", error.localizedDescription);
+                    DLog(@"%@", error.localizedDescription);
                     
                     [subscriber sendNext:@"登录失败"];
                     
@@ -122,7 +122,7 @@
         // 监听登录产生的数据
         [_loginCommand.executionSignals.switchToLatest subscribeNext:^(id x) {
 //            if ([x isEqualToString:@"登录成功"]) {
-//                NSLog(@"登录成功");
+//                DLog(@"登录成功");
 //            }
             @strongify(self)
             self.loginResultSTR = x;

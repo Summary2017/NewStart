@@ -8,6 +8,11 @@
 
 #import "GlobalConsts.h"
 
+NSString* const HGTabToContentNotification = @"HGTabToContentNotification";
+NSString* const HGContentToTabNotification = @"HGContentToTabNotification";
+
+NSString* const HGContentTabKey = @"HGContentTabKey";
+
 @implementation GlobalConsts
 
 @end

@@ -50,7 +50,7 @@
 #pragma mark -
 #pragma mark - SetupSignatureCellDelegate
 - (void)setupSignatureCell:(SetupSignatureCell *)cell didChangedValue:(NSString *)value {
-    NSLog(@"你输入的个性签名是: %@", value);
+    DLog(@"你输入的个性签名是: %@", value);
 }
 
 @end

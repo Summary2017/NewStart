@@ -20,4 +20,11 @@
 - (CGFloat)heightWithWidth:(CGFloat)width
                       font:(UIFont *)font;
 
+/** 计算文字的size
+ font  : 文本的字体的大小
+ width : 允许最长的宽
+ height: 允许最长的高
+ */
+- (CGSize)hgStringWithFont:(UIFont*)font width:(CGFloat)width height:(CGFloat)height;
+
 @end

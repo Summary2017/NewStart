@@ -105,14 +105,14 @@
     
     [RACObserve(self.loginViewMode, loginResultSTR) subscribeNext:^(id x) {
         if (!x) {
-            NSLog(@"开始登录...");
+            DLog(@"开始登录...");
             return ;
         }
         
         // 加载框隐藏
         [Public hideLoadingView];
         
-        NSLog(@" 登录结果 = %@", x);
+        DLog(@" 登录结果 = %@", x);
         if ([x isEqualToString:@"登录成功"]) {
             AppDelegate* appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
             appDelegate.window.rootViewController = [[TabBarController alloc] init];
