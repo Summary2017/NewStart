@@ -85,7 +85,7 @@
 #pragma mark -
 #pragma mark - 3DES（又叫Triple DES）是三重数据加密算法（TDEA，Triple Data Encryption Algorithm）块密码的通称。
 
-#define gIv  @"01234567"
+#define gIv  @"76543210"
 #define kSecrectKeyLength 24
 
 /**

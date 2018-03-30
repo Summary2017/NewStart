@@ -8,7 +8,7 @@ target 'NewStart' do
   # Pods for NewStart
 
 #  pod 'AFNetworking'
-  pod 'SDWebImage'
+  pod 'SDWebImage', '4.2.2'
   pod 'MJExtension'
   pod 'MJRefresh'
   pod 'Masonry'

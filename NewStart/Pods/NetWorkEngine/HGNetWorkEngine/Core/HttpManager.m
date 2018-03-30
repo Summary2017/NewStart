@@ -8,7 +8,6 @@
 
 #import "HttpManager.h"
 #import "AFNetworking.h"
-#import "NSString+Secure.h"
 #import "NSString+UserDefaults.h"
 
 NSString* const OKAAICPKey = @"OKAAICPKey";
@@ -448,13 +447,8 @@ static NSString* const OKAHttpManagerSuiteName = @"OKAHttpManagerSuiteName";
         strURL = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     }
     
-    // 使用密钥通过HMAC-SHA1算法签名字符基串，生成签名（先生成数字签名，然后再用base64 encode）：
-    NSString* signHmacsha1STR = [strURL hmacsha1WithKey_EHN:aicpValue];
-    
-    // 再base64一下
-    signHmacsha1STR = [signHmacsha1STR base64Encoded_EHN];
-    
-    // 其实在实际的正式项目中, 很有可能不会这么传值的...我这里删除了之前在工作中的传值方法, 这个应该不同的公司会有不同的方式. 各端应该是统一的.
+    // 加密
+    NSString* signHmacsha1STR = @"加密后的字符串";
     NSMutableDictionary* resultParams = [NSMutableDictionary dictionaryWithDictionary:tempDictM];
     [resultParams setValue:signHmacsha1STR forKey:@"sign"];
     

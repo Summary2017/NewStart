@@ -82,19 +82,15 @@
     self.placeholderLabel.hidden = (textView.text.length > 0);;
     
     { // 高亮处理
-        UITextRange *selectedRange = [textView markedTextRange];
-        // positionFromPosition 获取以from为基准偏移offset的光标位置。
-        // 在给定的偏移量返回另一个文本位置的文本位置。
-        UITextPosition *pos = [textView positionFromPosition:selectedRange.start offset:0];
         // 如果在变化中是高亮部分在变，就不要计算字符了
-        if (selectedRange && pos) {
+        if (textView.hg_isHighLighted) {
             return ;
         }
         
     }
     
     if (textView.text.length > self.maxCount) {
-        [textView invalidTextFieldCurContent:self.signatureTEXT];
+        [textView hg_invalidTextFieldCurContent:self.signatureTEXT];
         return;
     }
     

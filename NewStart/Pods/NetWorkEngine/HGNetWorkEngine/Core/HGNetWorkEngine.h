@@ -127,31 +127,6 @@
 
 
 #pragma mark -
-#pragma mark - 推送
-/**
- * 推送注册
- */
-+ (NSURLSessionDataTask*)boundTokenWithParams:(NSDictionary*)paramas
-                                      success:(void (^)(NSDictionary *bDict))success
-                                      failure:(void (^)(NSError *bError))failure;
-
-
-/**
- * 消息到达注册
- */
-+ (NSURLSessionDataTask*)messageDeilverWithParams:(NSDictionary *)paramas
-                                          success:(void (^)(NSDictionary *bDict))success
-                                          failure:(void (^)(NSError *bError))failure;
-
-/**
- * 新消息添加
- */
-+ (NSURLSessionDataTask*)getMessageContentWithParam:(NSDictionary *)paramas
-                                            success:(void (^)(NSDictionary *bDict))success
-                                            failure:(void (^)(NSError *bError))failure;
-
-
-#pragma mark -
 #pragma mark - 需要在子类中实现的方法
 /**
  * 基本参数

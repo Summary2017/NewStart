@@ -213,7 +213,7 @@
     
     if (textField == self.userNameTextFiled) {
         if (![textField.text userNameRegex]) {
-            [textField invalidTextFieldCurContent:self.accountSTR];
+            [textField hg_invalidTextFieldCurContent:self.accountSTR];
         } else {
             self.accountSTR = textField.text;
         }
