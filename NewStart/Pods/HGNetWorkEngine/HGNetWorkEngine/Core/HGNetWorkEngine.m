@@ -7,7 +7,7 @@
 //
 
 #import "HGNetWorkEngine.h"
-#import "HttpManager.h"
+#import "HGHttpManager.h"
 #import "NSString+Secure.h"
 
 @implementation HGNetWorkEngine
@@ -48,12 +48,12 @@
         [nParemeters setValuesForKeysWithDictionary:param];
     }
     
-    [nParemeters setValue:[self AICP] forKey:OKAAICPKey];
+    [nParemeters setValue:[self AICP] forKey:HGAICPKey];
     
     // 全路径
     NSString* fullURL = [NSString stringWithFormat:@"%@/%@", [self kNetWorkServiceAddress], path];
     
-    NSURLSessionDataTask *dataTask = [[HttpManager shareHttpTool] POST:fullURL params:nParemeters progress:progress success:^(NSURLSessionDataTask *operation, id responseObject) {
+    NSURLSessionDataTask *dataTask = [[HGHttpManager shareHttpTool] POST:fullURL params:nParemeters progress:progress success:^(NSURLSessionDataTask *operation, id responseObject) {
         // 统一格式返回
         [self netWorkServiceWithOperation:operation responseObject:responseObject success:success failure:failure];
         
@@ -103,12 +103,12 @@
         [nParemeters setValuesForKeysWithDictionary:param];
     }
     
-    [nParemeters setValue:[self AICP] forKey:OKAAICPKey];
+    [nParemeters setValue:[self AICP] forKey:HGAICPKey];
     
     // 全路径
     NSString* fullURL = [NSString stringWithFormat:@"%@/%@", [self kNetWorkServiceAddress], path];
     
-    NSURLSessionDataTask *dataTask = [[HttpManager shareHttpTool] GET:fullURL params:nParemeters progress:progress success:^(NSURLSessionDataTask *operation, id responseObject) {
+    NSURLSessionDataTask *dataTask = [[HGHttpManager shareHttpTool] GET:fullURL params:nParemeters progress:progress success:^(NSURLSessionDataTask *operation, id responseObject) {
         
         // 统一格式返回
         [self netWorkServiceWithOperation:operation responseObject:responseObject success:success failure:failure];
@@ -140,12 +140,12 @@
         [nParemeters setValuesForKeysWithDictionary:params];
     }
     
-    [nParemeters setValue:[self AICP] forKey:OKAAICPKey];
+    [nParemeters setValue:[self AICP] forKey:HGAICPKey];
     
     // 全路径
     NSString* fullURL = [NSString stringWithFormat:@"%@/%@", [self kNetWorkServiceAddress], path];
     
-    NSURLSessionDataTask *dataTask = [[HttpManager shareHttpTool] DELETE:fullURL params:nParemeters success:^(NSURLSessionDataTask *operation, id responseObject) {
+    NSURLSessionDataTask *dataTask = [[HGHttpManager shareHttpTool] DELETE:fullURL params:nParemeters success:^(NSURLSessionDataTask *operation, id responseObject) {
         
         // 统一格式返回
         [self netWorkServiceWithOperation:operation responseObject:responseObject success:success failure:failure];
@@ -177,12 +177,12 @@
         [nParemeters setValuesForKeysWithDictionary:params];
     }
     
-    [nParemeters setValue:[self AICP] forKey:OKAAICPKey];
+    [nParemeters setValue:[self AICP] forKey:HGAICPKey];
     
     // 全路径
     NSString* fullURL = [NSString stringWithFormat:@"%@/%@", [self kNetWorkServiceAddress], path];
     
-    NSURLSessionDataTask *dataTask = [[HttpManager shareHttpTool] PUT:fullURL params:nParemeters success:^(NSURLSessionDataTask *operation, id responseObject) {
+    NSURLSessionDataTask *dataTask = [[HGHttpManager shareHttpTool] PUT:fullURL params:nParemeters success:^(NSURLSessionDataTask *operation, id responseObject) {
         
         // 统一格式返回
         [self netWorkServiceWithOperation:operation responseObject:responseObject success:success failure:failure];
@@ -237,12 +237,12 @@
         [nParemeters setValuesForKeysWithDictionary:param];
     }
     
-    [nParemeters setValue:[self AICP] forKey:OKAAICPKey];
+    [nParemeters setValue:[self AICP] forKey:HGAICPKey];
     
     // 全路径
     NSString* fullURL = [NSString stringWithFormat:@"%@/%@", [self kNetWorkServiceAddress], path];
     
-    NSURLSessionDataTask *dataTask = [[HttpManager shareHttpTool] filePOST:fullURL params:nParemeters extension:extension data:data progress:progress success:^(NSURLSessionDataTask *operation, id responseObject) {
+    NSURLSessionDataTask *dataTask = [[HGHttpManager shareHttpTool] filePOST:fullURL params:nParemeters extension:extension data:data progress:progress success:^(NSURLSessionDataTask *operation, id responseObject) {
         
         // 统一格式返回
         [self netWorkServiceWithOperation:operation responseObject:responseObject success:success failure:failure];

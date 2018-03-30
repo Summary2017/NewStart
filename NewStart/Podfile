@@ -18,6 +18,6 @@ target 'NewStart' do
   # 自己的开源代码
   pod 'HGCategorys'
   pod 'HGBaseClass'
-  pod 'NetWorkEngine'
+  pod 'HGNetWorkEngine'
 
 end

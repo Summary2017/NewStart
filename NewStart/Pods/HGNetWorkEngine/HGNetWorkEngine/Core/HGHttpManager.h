@@ -1,5 +1,5 @@
 //
-//  HttpManager.h
+//  HGHttpManager.h
 //  NWEManager
 //
 //  Created by  ZhuHong on 2017/9/4.
@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-UIKIT_EXTERN NSString* const OKAAICPKey;
+UIKIT_EXTERN NSString* const HGAICPKey;
 
-@interface HttpManager : NSObject
+@interface HGHttpManager : NSObject
 
 
 /**

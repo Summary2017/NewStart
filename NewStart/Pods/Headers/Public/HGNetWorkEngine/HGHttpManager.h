@@ -1,0 +1,1 @@
+../../../HGNetWorkEngine/HGNetWorkEngine/Core/HGHttpManager.h

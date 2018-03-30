@@ -1,21 +1,21 @@
 //
-//  HttpManager.m
+//  HGHttpManager.m
 //  NWEManager
 //
 //  Created by  ZhuHong on 2017/9/4.
 //  Copyright © 2017年 EasyMoveMobile. All rights reserved.
 //
 
-#import "HttpManager.h"
+#import "HGHttpManager.h"
 #import "AFNetworking.h"
 #import "NSString+UserDefaults.h"
 
-NSString* const OKAAICPKey = @"OKAAICPKey";
+NSString* const HGAICPKey = @"HGAICPKey";
 
-static NSString* const OKAHttpManagerACCESSTOKENKey = @"OKAHttpManagerACCESSTOKENKey";
-static NSString* const OKAHttpManagerSuiteName = @"OKAHttpManagerSuiteName";
+static NSString* const HGHttpManagerACCESSTOKENKey = @"HGHttpManagerACCESSTOKENKey";
+static NSString* const HGHttpManagerSuiteName = @"HGHttpManagerSuiteName";
 
-@interface HttpManager ()
+@interface HGHttpManager ()
 
 /**
  请求管理者
@@ -30,13 +30,13 @@ static NSString* const OKAHttpManagerSuiteName = @"OKAHttpManagerSuiteName";
 
 @end
 
-@implementation HttpManager
+@implementation HGHttpManager
 
 #pragma MARK -
 #pragma mark - 创建HttpManager实例变量
 + (instancetype)shareHttpTool {
     static dispatch_once_t onceToken;
-    static HttpManager   *_shateInstance;
+    static HGHttpManager   *_shateInstance;
     dispatch_once(&onceToken, ^{
         _shateInstance = [[self alloc] init];
         
@@ -48,7 +48,7 @@ static NSString* const OKAHttpManagerSuiteName = @"OKAHttpManagerSuiteName";
  设置成Body请求方式, 主要用于 POST  GET
  */
 + (void)setupBodyRequest {
-    HttpManager* httpManager = [HttpManager shareHttpTool];
+    HGHttpManager* httpManager = [HGHttpManager shareHttpTool];
     httpManager.bodyRequest = YES;
 }
 
@@ -101,11 +101,11 @@ static NSString* const OKAHttpManagerSuiteName = @"OKAHttpManagerSuiteName";
  */
 + (BOOL)setupACCESSTOKEN {
     // 本地获取
-    NSString* token = [OKAHttpManagerACCESSTOKENKey objectThroughUserDefaultsWithSuiteName:OKAHttpManagerSuiteName];
+    NSString* token = [HGHttpManagerACCESSTOKENKey objectThroughUserDefaultsWithSuiteName:HGHttpManagerSuiteName];
     [self updateACCESSTOKENWithToken:token];
     
     if (token && (token.length > 0)) {
-        HttpManager* httpManger = [self shareHttpTool];
+        HGHttpManager* httpManger = [self shareHttpTool];
         httpManger.ACCESS_TOKEN = token;
     }
     
@@ -119,14 +119,14 @@ static NSString* const OKAHttpManagerSuiteName = @"OKAHttpManagerSuiteName";
  */
 + (void)updateACCESSTOKENWithToken:(NSString*)token {
     
-    HttpManager* httpManger = [self shareHttpTool];
+    HGHttpManager* httpManger = [self shareHttpTool];
     AFHTTPRequestSerializer *requestSerializer = httpManger.httpManager.requestSerializer;
     
     if (token.length > 0) {
         // 设置
         [requestSerializer setValue:token forHTTPHeaderField:@"ACCESS_TOKEN"];
         
-        BOOL is = [token userDefaultsforKey:OKAHttpManagerACCESSTOKENKey suiteName:OKAHttpManagerSuiteName];
+        BOOL is = [token userDefaultsforKey:HGHttpManagerACCESSTOKENKey suiteName:HGHttpManagerSuiteName];
         
         httpManger.ACCESS_TOKEN = token;
         
@@ -427,9 +427,9 @@ static NSString* const OKAHttpManagerSuiteName = @"OKAHttpManagerSuiteName";
     
     NSMutableDictionary* tempDictM = [NSMutableDictionary dictionaryWithDictionary:params];
     
-    NSString* aicpValue = tempDictM[OKAAICPKey];
+//    NSString* aicpValue = tempDictM[HGAICPKey];
     // 去除这个值
-    [tempDictM removeObjectForKey:OKAAICPKey];
+    [tempDictM removeObjectForKey:HGAICPKey];
     
     // 开始加密操作
     NSString* strURL = nil;
@@ -500,7 +500,7 @@ static NSString* const OKAHttpManagerSuiteName = @"OKAHttpManagerSuiteName";
 /** 取消当前正在发送中的请求 */
 + (void)cancelAllRequest {
     
-    HttpManager* httpM = [self shareHttpTool];
+    HGHttpManager* httpM = [self shareHttpTool];
     [httpM.httpManager.operationQueue cancelAllOperations];
 }
 
