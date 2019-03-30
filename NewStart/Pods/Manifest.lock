@@ -49,6 +49,18 @@ DEPENDENCIES:
   - ReactiveCocoa (~> 2.5)
   - SDWebImage (= 4.2.2)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - HGBaseClass
+    - HGCategorys
+    - HGNetWorkEngine
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - ReactiveCocoa
+    - SDWebImage
+
 SPEC CHECKSUMS:
   AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
   HGBaseClass: c88f3c1ffbf792664f0a01bfee2150b0dc2af77d
@@ -62,4 +74,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 011ccfbbee5a55383a5ee48e5fee690e0926293e
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.6.1

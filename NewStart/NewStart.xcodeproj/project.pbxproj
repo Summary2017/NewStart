@@ -17,7 +17,6 @@
 		51365FED1FF7893500ADA079 /* HomeBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51365FEC1FF7893500ADA079 /* HomeBottomView.m */; };
 		51365FF11FF7953D00ADA079 /* HomeImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51365FEF1FF7953D00ADA079 /* HomeImageCell.m */; };
 		51365FF21FF7953D00ADA079 /* HomeImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51365FF01FF7953D00ADA079 /* HomeImageCell.xib */; };
-		5142B79B1FF36E2D00D904CB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5142B7931FF36E2C00D904CB /* Info.plist */; };
 		5142B79C1FF36E2D00D904CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5142B7941FF36E2C00D904CB /* main.m */; };
 		5142B79D1FF36E2D00D904CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5142B7961FF36E2D00D904CB /* LaunchScreen.storyboard */; };
 		5142B79F1FF36E2D00D904CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5142B79A1FF36E2D00D904CB /* Assets.xcassets */; };
@@ -948,7 +947,6 @@
 				5142B7451FF35DB200D904CB /* Sources */,
 				5142B7461FF35DB200D904CB /* Frameworks */,
 				5142B7471FF35DB200D904CB /* Resources */,
-				B8E131B2F146F6EF5AA54BF7 /* [CP] Embed Pods Frameworks */,
 				6FE977CE1BFA1585AF8DF997 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -1001,7 +999,6 @@
 			files = (
 				5142B8B91FF3D21A00D904CB /* TGRImageViewController.xib in Resources */,
 				5142B9031FF3F58F00D904CB /* LoadingView.xib in Resources */,
-				5142B79B1FF36E2D00D904CB /* Info.plist in Resources */,
 				5142B8CE1FF3D22700D904CB /* HGAuthorizationController.xib in Resources */,
 				51A9B71A1FF5EEAC000284EF /* Message.storyboard in Resources */,
 				51365FF21FF7953D00ADA079 /* HomeImageCell.xib in Resources */,
@@ -1024,7 +1021,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-NewStart/Pods-NewStart-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-NewStart/Pods-NewStart-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -1033,22 +1030,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NewStart/Pods-NewStart-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B8E131B2F146F6EF5AA54BF7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NewStart/Pods-NewStart-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NewStart/Pods-NewStart-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E0BBD197904D29D285878D35 /* [CP] Check Pods Manifest.lock */ = {
@@ -1290,7 +1272,7 @@
 				INFOPLIST_FILE = NewStart/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.CoderHG.NewStart;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CoderHG.Manager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "NewStart/General/Modules/Message/Controllers/NewStart-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1311,7 +1293,7 @@
 				INFOPLIST_FILE = NewStart/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.CoderHG.NewStart;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CoderHG.Manager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "NewStart/General/Modules/Message/Controllers/NewStart-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
