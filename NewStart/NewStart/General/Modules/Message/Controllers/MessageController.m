@@ -156,7 +156,7 @@
     
     BrowserController* browerVC = [[BrowserController alloc] init];
     browerVC.title =  msgModel.title;
-    browerVC.urlSTR = HGStr(@"https://www.jianshu.com/p/%@", msgModel.url_id);
+    // browerVC.urlSTR = HGStr(@"https://www.jianshu.com/p/%@", msgModel.url_id);
     [self.navigationController pushViewController:browerVC animated:YES];
 }
 

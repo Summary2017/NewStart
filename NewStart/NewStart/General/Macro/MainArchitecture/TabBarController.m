@@ -113,9 +113,9 @@
     BrowserController* browerVC = [[BrowserController alloc] init];
     browerVC.title =  controllerName;
     if ([controllerName isEqualToString:@"我的代码"]) {
-        browerVC.urlSTR = @"https://github.com/Summary2017";
+        // browerVC.urlSTR = @"https://github.com/Summary2017";
     } else {
-        browerVC.urlSTR = @"https://www.jianshu.com/p/c0e611fc0548";
+        // browerVC.urlSTR = @"https://www.jianshu.com/p/c0e611fc0548";
     }
     
     UINavigationController* navVC = (UINavigationController*)self.selectedViewController;

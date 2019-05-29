@@ -129,7 +129,7 @@
     BrowserController* browerVC = [[BrowserController alloc] init];
     browerVC.title =  homeModel.title;
     // 有点绕, 哈哈哈
-    browerVC.urlSTR = homeModel.urlSTR.mj_url.absoluteString;
+    // browerVC.urlSTR = homeModel.urlSTR.mj_url.absoluteString;
     [self.navigationController pushViewController:browerVC animated:YES];
 }
 
