@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,7 +16,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="拼命加载中,请稍等..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsD-52-WAl">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -25,12 +24,11 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.2734107449" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="UsD-52-WAl" secondAttribute="trailing" id="8Rz-jv-BHv"/>
-                <constraint firstItem="UsD-52-WAl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="AvZ-cO-xxb"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="UsD-52-WAl" secondAttribute="bottom" id="VgV-2h-MDX"/>
-                <constraint firstItem="UsD-52-WAl" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="aV0-jL-goU"/>
+                <constraint firstAttribute="trailing" secondItem="UsD-52-WAl" secondAttribute="trailing" id="8Rz-jv-BHv"/>
+                <constraint firstItem="UsD-52-WAl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="AvZ-cO-xxb"/>
+                <constraint firstAttribute="bottom" secondItem="UsD-52-WAl" secondAttribute="bottom" id="VgV-2h-MDX"/>
+                <constraint firstItem="UsD-52-WAl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aV0-jL-goU"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="tipsLabel" destination="UsD-52-WAl" id="Iv1-ys-ET2"/>
             </connections>

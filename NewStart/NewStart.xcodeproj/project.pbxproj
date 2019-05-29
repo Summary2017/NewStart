@@ -1270,7 +1270,7 @@
 				DEVELOPMENT_TEAM = D8Y5E9ZUX3;
 				GCC_PREFIX_HEADER = NewStart/General/Macro/Public/Common.pch;
 				INFOPLIST_FILE = NewStart/SupportingFiles/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CoderHG.Manager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1291,7 +1291,7 @@
 				DEVELOPMENT_TEAM = D8Y5E9ZUX3;
 				GCC_PREFIX_HEADER = NewStart/General/Macro/Public/Common.pch;
 				INFOPLIST_FILE = NewStart/SupportingFiles/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CoderHG.Manager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
